@@ -136,7 +136,11 @@ class Example extends Component{
 
 toast view
 ```js
-Toast.show(message, {
+
+import Toast from 'react-native-view-toast'
+
+// show
+this.toast = Toast.show(message, {
             duration: Toast.durations.Long,
             position: Toast.positions.BOTTOM,
             shadow: false,
@@ -147,6 +151,9 @@ Toast.show(message, {
                 </View>
             )
         })
+        
+// hide
+Toast.hide(this.toast)        
 ```
 
 ### Run example:
