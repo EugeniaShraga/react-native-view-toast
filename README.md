@@ -1,4 +1,4 @@
-### react-native-root-toast
+### react-native-view-toast
 
 -----------------------
 
@@ -12,7 +12,7 @@
 
 ### Install
 
-`npm install react-native-root-toast`
+`npm install react-native-view-toast`
 
 
 ### Settings
@@ -62,7 +62,7 @@ There are two different ways to manage a Toast.
 ##### **Calling api**
 
 ```
-import Toast from 'react-native-root-toast';
+import Toast from 'react-native-view-toast';
 
 
 // Add a Toast on screen.
@@ -101,7 +101,7 @@ Showing a toast by using a Component inside render, The toast will be automatica
 
 ```
 import React, {Component} from 'react-native';
-import Toast from 'react-native-root-toast';
+import Toast from 'react-native-view-toast';
 
 class Example extends Component{
     constructor() {
@@ -132,6 +132,21 @@ class Example extends Component{
     }
 }
 
+```
+
+toast view
+```js
+Toast.show(message, {
+            duration: Toast.durations.Long,
+            position: Toast.positions.BOTTOM,
+            shadow: false,
+            animation: true,
+            view: () => (
+                <View style={{alignItems: 'center', marginBottom: 10}}>
+                    <Image source={require('../img/bugaoxing.png')} style={{height: 44, width: 44}} />
+                </View>
+            )
+        })
 ```
 
 ### Run example:
